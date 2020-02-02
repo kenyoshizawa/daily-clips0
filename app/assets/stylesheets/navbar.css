@@ -1,0 +1,14 @@
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  /*position: relative;*/
+  /*min-height: 50px;*/
+  /*margin-bottom: 20px;*/
+  border: 1px solid transparent;
+  /*background-color: #222;*/
+  border-color: #080808;
+}
