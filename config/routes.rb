@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :rooms, only: [:show, :create]
   # get 'room/:id', to: 'rooms#show'
   # post 'rooms', to: 'rooms#create'
+  mount ActionCable.server => '/cable'
 end
