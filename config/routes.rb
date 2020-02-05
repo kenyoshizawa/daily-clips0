@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   resources :rooms, only: [:show, :create]
+  mount ActionCable.server => '/cable'
   # get 'room/:id', to: 'rooms#show'
   # post 'rooms', to: 'rooms#create'
-  mount ActionCable.server => '/cable'
 end

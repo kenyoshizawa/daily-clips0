@@ -1,7 +1,8 @@
-<h1><%= "ルーム名：#{@room.name}" %></h1>
+<p>ログインユーザー: <%= current_user.name %></p>
+<h2><%= "ルーム名：#{@room.name}" %></h2>
 
 <div id="messages">
-  <%= render "messages/message" %>
+  <%= render @messages %>
 </div>
 
 <form>
@@ -11,6 +12,7 @@
   </div>
 </form>
 
+<%= link_to '一覧に戻る', root_path %>
 <!-- jquery動作確認用 -->
 <script>
   $("#messages").css("color","red")

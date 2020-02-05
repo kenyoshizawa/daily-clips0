@@ -5,7 +5,6 @@ App.room = App.cable.subscriptions.create({channel: "RoomChannel", room: $('#mes
   disconnected: function() {
   },
   received: function(data) {
-    return alert();
     return $('#messages').append(data['message']);
   },
   speak: function(message) {

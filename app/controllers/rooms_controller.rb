@@ -8,7 +8,7 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     @room.save
     current_user.user_rooms.create(room_id: @room.id)
-    redirect_to(room_url(@room))
+    redirect_to(root_url)
   end
 
   private
