@@ -1,15 +1,15 @@
 <% if logged_in? %>
   <p>ログインユーザー: <%= current_user.name %></p>
 
+  <h2>Room一覧</h2>
+  <% @rooms.each do |room| %>
+    <%= link_to room.name, room_path(room) %>
+  <% end %>
+
   <h2>トークルーム作成</h2>
   <%= form_for(@room) do |f| %>
     <%= f.label :name, 'Room Name' %>
     <%= f.text_field :name %>
     <%= f.submit %>
-  <% end %>
-
-  <h2>Room一覧</h2>
-  <% @rooms.each do |room| %>
-    <%= link_to room.name, room_path(room) %>
   <% end %>
 <% end %>
