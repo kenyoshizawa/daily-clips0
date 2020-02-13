@@ -8,9 +8,10 @@
 <form>
   <label>Say something:</label>
   <div class="form-group">
-    <input type="text" data-behavior="room_speaker" data-user="<%= current_user.id %>" data-room="<%= @room.id %>">
+    <input type="text" data-behavior="room_speaker">
   </div>
 </form>
+
 
 <%= link_to '一覧に戻る', root_path %>
 <!-- jquery動作確認用 -->

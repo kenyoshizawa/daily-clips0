@@ -1,6 +1,4 @@
 class RoomsController < ApplicationController
-  include SessionsHelper
-
   def show
     @room = Room.find(params[:id])
     @messages = @room.messages
