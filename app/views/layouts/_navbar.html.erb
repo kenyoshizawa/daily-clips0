@@ -11,10 +11,22 @@
       <% if logged_in? %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <%= current_user.name %>
+
+            <%= link_to edit_user_path(current_user) do %>
+              <div class="circle-image-user">
+                <% if current_user.image? %>
+                  <%= image_tag current_user.image.url %>
+                <% else %>
+                  <%= image_tag "/assets/default.jpg" %>
+                <% end %>
+              </div>
+              <p><%= current_user.name %></p>
+            <% end %>
+
           </a>
           <ul class="dropdown-menu">
             <li role="separator" class="divider"></li>
+            <li><%= link_to 'Room作成', new_room_path %></li>
             <li><%= link_to 'Logout', logout_path, method: :delete %></li>
           </ul>
         </li>

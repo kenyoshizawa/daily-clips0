@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     name = params[:session][:name]
     password = params[:session][:password]
     if login(name, password)
-      flash[:success] = 'ログインに成功しました。'
+      # flash[:success] = 'ログインに成功しました。'
       redirect_to(root_url)
     else
       flash.now[:danger] = 'ログインに失敗しました。'
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: name)
     if @user && @user.authenticate(password)
       session[:user_id] = @user.id
-      cookies.encrypted[:user_id] = @user.id
+      # cookies.encrypted[:user_id] = @user.id
       return true
     else
       return false

@@ -1,0 +1,24 @@
+<h1>プロフィール編集</h1>
+
+<div class="circle-image">
+  <%= form_for(current_user) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+
+    <div class="form-group">
+      <%= f.label :name%>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <% if current_user.image? %>
+      <%= image_tag current_user.image.url %>
+    <% else %>
+      <%= image_tag "/assets/default.jpg" %>
+    <% end %>
+
+    <button type="button" class="btn btn-outline-secondary rounded-pill">
+      <%= f.file_field :image, accept: 'image/jpg, image/jpeg, image/gif, image/png' %>
+    </button>
+    <%= f.submit '保存', class: 'btn btn-primary' %>
+  <% end %>
+</div>
+<%= link_to '一覧に戻る', root_path %>

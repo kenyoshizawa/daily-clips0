@@ -1,17 +1,22 @@
-<p>ログインユーザー: <%= current_user.name %></p>
 <h2><%= "ルーム名：#{@room.name}" %></h2>
 
-<div id="messages">
-  <%= render @messages %>
+<div id="youtube">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @room.url%>"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
 </div>
 
-<form>
-  <label>Say something:</label>
-  <div class="form-group">
-    <input type="text" data-behavior="room_speaker">
+<div id="chat">
+  <div id="messages">
+    <%= render @messages %>
   </div>
-</form>
-
+  <form>
+    <label>Say something:</label>
+    <div class="form-group">
+      <input type="text" data-behavior="room_speaker">
+    </div>
+  </form>
+</div>
 
 <%= link_to '一覧に戻る', root_path %>
 <!-- jquery動作確認用 -->
