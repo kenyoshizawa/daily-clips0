@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :require_user_logged_in
 
   def show
-    @room = Room.find(params[:id])
+    @room = Room.find(params[:id])    
     @messages = @room.messages
 
     url = @room.url.scan(/\?v=([^&]+)/)

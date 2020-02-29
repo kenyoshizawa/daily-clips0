@@ -8,7 +8,11 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
     return $('#messages').append(data['message']);
   },
   speak: function(message) {
-    return this.perform('speak', {message: message});
+    console.log(message)
+    // var messages = document.getElementById('messages');
+    // console.log(messages.dataset.room_id);
+    console.log($('#messages').data('room_id'))
+    return this.perform('speak', {message: message, room_id: messages.dataset.room_id});
   }
 });
 
