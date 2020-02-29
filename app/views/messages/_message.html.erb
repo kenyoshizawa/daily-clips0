@@ -1,3 +1,6 @@
 <div class="message">
+  <div class="circle-image-user">
+    <%= image_tag message.user.image.url %>
+  </div>
   <p><%= message.user.name %>:<%= message.content %></p>
 </div>
