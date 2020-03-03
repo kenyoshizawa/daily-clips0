@@ -16,11 +16,31 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   }
 });
 
-
 $(document).on('keypress', '[data-behavior~=room_speaker]', function(event){
   if ( event.keyCode === 13 ) {
     App.room.speak(event.target.value);
     event.target.value = ''
     event.preventDefault();
+
+    // 自動スクロール
+    var a = $('#test').outerHeight(true);
+    console.log(a);
+
+    var c = $('div').scrollTop();
+    console.log(c);
+
+    var target = $('.message').last();
+    var position = target.offset().top
+    var y = c + position;
+    console.log(y);
+
+    var b = $('#messages').height();
+    console.log(b);
+
+    // $('#messages').scrollTop(y-b);
   }
+});
+$(document).ready( function(){
+  var a = $('#test').outerHeight(true);
+  $('#messages').scrollTop(a);
 });

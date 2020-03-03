@@ -1,9 +1,18 @@
 <% if logged_in? %>
   <h2>Room一覧</h2>
-  <% @rooms.each do |room| %>
-    <%= link_to room.name, room_path(room) %>
-    <%= room.comment %>
-  <% end %>
+  <div class='youtube_home'>
+    <% @rooms.reverse.each do |room| %>
+
+      <div class='col'>
+        <h3><%= room.name %></h3>
+        <%= link_to room_path(room) do %>
+          <p><%= room.comment %></p>
+          <img src="https://img.youtube.com/vi/<%= room.url.scan(/\?v=([^&]+)/).flatten[0] %>/hqdefault.jpg">
+        <% end %>
+      </div>
+
+    <% end %>
+  </div>
 
 <% else %>
 <p>ログイン前表示</p>

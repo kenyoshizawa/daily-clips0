@@ -6,3 +6,24 @@
   width: 50%;
   float: right;
 }
+
+div#messages {
+  width: 380px;
+  height: 360px;
+  overflow: auto;
+  word-wrap: break-word;
+  /* white-space: normal; */
+  border: 1px solid red;
+  text-align: left;
+ }
+
+body{
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+div#test{
+  margin: 0;
+  background-color :pink;
+}
