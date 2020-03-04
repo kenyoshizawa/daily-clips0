@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: name)
     if @user && @user.authenticate(password)
       session[:user_id] = @user.id
-      # cookies.encrypted[:user_id] = @user.id
+      cookies.permanent.signed[:user_id] = @user.id
       return true
     else
       return false
