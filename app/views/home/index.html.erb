@@ -4,10 +4,9 @@
     <% @rooms.reverse.each do |room| %>
 
       <div class='col'>
-        <h3><%= room.name %></h3>
         <%= link_to room_path(room) do %>
-          <p><%= room.comment %></p>
-          <img src="https://img.youtube.com/vi/<%= room.url.scan(/\?v=([^&]+)/).flatten[0] %>/hqdefault.jpg">
+          <h3><%= room.name %></h3>
+          <img src="https://img.youtube.com/vi/<%= room.youtube_url.scan(/\?v=([^&]+)/).flatten[0] %>/hqdefault.jpg">
         <% end %>
       </div>
 

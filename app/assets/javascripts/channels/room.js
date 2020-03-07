@@ -21,24 +21,8 @@ $(document).on('keypress', '[data-behavior~=room_speaker]', function(event){
     event.target.value = ''
     event.preventDefault();
 
-
-    var all = $('#all-messages').outerHeight(true);
-    console.log(all);
-
-    var c = $('#messages').scrollTop();
-    console.log(c);
-
-    var target = $('.message').last();
-    var position = target.offset().top
-    var message = $('.message').height();
-    var addmessage = position + message;
-    console.log(addmessage);
-
-    var scrollbox = $('#messages').height();
-    console.log(scrollbox);
-
-    // $('#messages').scrollTop(y-b);
-
+    $('div #messages').animate({ scrollTop: $('#all-messages').height() });
+    console.log($('#all-messages').height());
   }
 });
 $(document).ready( function(){

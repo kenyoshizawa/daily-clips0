@@ -5,8 +5,8 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @messages = @room.messages
 
-    url = @room.url.scan(/\?v=([^&]+)/).flatten
-    @room.url = url[0]
+    url = @room.youtube_url.scan(/\?v=([^&]+)/).flatten
+    @room.youtube_url = url[0]
   end
 
   def new
@@ -27,6 +27,6 @@ class RoomsController < ApplicationController
 
   private
   def room_params
-    params.require(:room).permit(:name, :comment, :url)
+    params.require(:room).permit(:name, :youtube_url)
   end
 end

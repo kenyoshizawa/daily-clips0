@@ -2,6 +2,10 @@
   width: 50%;
   float: left;
 }
+/* img{
+  position: absolute;
+  clip: rect(50px 480px 310px 0px);
+} */
 #chat{
   width: 50%;
   float: right;
