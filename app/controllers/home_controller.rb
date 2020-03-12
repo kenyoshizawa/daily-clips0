@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
     if logged_in?
       # @room = Room.find(params[:id])
-      @rooms = Room.last(2)
+      @rooms = Room.last(8)
       # url = @room.url.scan(/\?v=([^&]+)/)
       # new_url = url.flatten
       # @room.url = new_url[0]

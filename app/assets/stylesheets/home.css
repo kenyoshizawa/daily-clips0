@@ -2,15 +2,35 @@
   margin: 0;
   padding: 0;
 }
-.youtube_home{
-  border: 5px solid pink;
+h1{
+  margin: 50px auto 0;
+  width: 1300px;
+}
+.youtube-home {
   margin-left: auto;
   margin-right: auto;
   width: 1300px;
 }
 .col{
-  border: 5px solid red;
-  width: 500px;
-  height: 450px;
-  display: inline-block;
+  float: left;
+  width: 22.75%;
+  margin-left: 3%;
+  height: 280px;
+
+  line-height: 1.0em;
+}
+.col:first-child{
+  margin-left: 0;
+}
+.col:nth-of-type(5){
+  margin-left: 0;
+}
+a{ text-decoration: none; }
+p{ color: black; }
+
+.col img{
+  height: 165px;
+	width: 300px;
+  object-fit: cover;
+	object-position: center center;
 }

@@ -1,33 +1,132 @@
+/* room全体 */
+#room{
+  width: 1300px;
+  height: 440px;
+  margin: 0 auto;
+}
+/* youtube動画 */
 #youtube{
   width: 50%;
   float: left;
+  /* border: 1px solid red; */
 }
-/* img{
-  position: absolute;
-  clip: rect(50px 480px 310px 0px);
-} */
+#youtube iframe{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+/* チャット */
 #chat{
   width: 50%;
   float: right;
 }
+/* スクロールバー */
+div#messages{
+  display: block;
+  margin: 0 auto;
 
-div#messages {
-  width: 380px;
-  height: 360px;
+  width: 400px;
+  height: 400px;
   overflow: auto;
   word-wrap: break-word;
-  /* white-space: normal; */
+  white-space: normal;
   border: 1px solid red;
+  padding: 10px;
+  /* background-color: rgb(220, 220, 220); */
   text-align: left;
  }
+/* フォーム */
+ #chat-form input[type='text'] {
+ 	font: 15px/24px sans-serif;
+ 	box-sizing: border-box;
+ 	width: 100%;
+ 	padding: 0.3em;
+ 	transition: 0.3s;
+ 	letter-spacing: 1px;
+ 	border: 1px solid #1b2538;
+ 	border-radius: 4px;
+  margin-top: 10px;
+ }
+ .ef input[type='text']:focus {
+ 	border: 1px solid #da3c41;
+ 	outline: none;
+ 	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+ }
 
-body{
-  margin: 0;
+/* チャット中身 */
+.message{
+  display: block;
+  margin-bottom: 10px;
 }
-p{
-  margin: 0;
+.message:after{
+  content: "";
+  display: block;
+  clear: both;
 }
-div#all-messages{
-  margin: 0;
-  background-color :pink;
+.message .circle-image-user{
+  display: inline-block;
+  float: left;
+  width: 80px;
 }
+/* 位置 */
+h2{
+  margin: 50px auto 0;
+  width: 1200px;
+}
+.home-button{
+  margin: 350px auto 0;
+  width: 1200px;
+}
+#chat form{
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* homeボタン */
+/* a{ color: black; }
+.return-home{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 160px;
+	padding: 1em;
+	line-height: 1.4;
+	cursor: pointer;
+	user-select: none;
+	color: #ffffff;
+	border: 1px solid #FFB300;
+	border-radius: 0.25rem;
+	background: #FFB300;
+}
+.return-home:after {
+	position: absolute;
+	display: block;
+	margin-top: -120%;
+	margin-left: -120%;
+	padding-top: 240%;
+	padding-left: 240%;
+	content: '';
+	transition: all 1s;
+	opacity: 0;
+	border-radius: 50%;
+	background: rgba(255,255,255,0.3);
+}
+.return-home:hover{
+	color: #ffffff;
+	border-color: #FF8F00;
+	background-color: #FF8F00;
+}
+.return-home:active:after {
+	margin-top: 0;
+	margin-left: 0;
+	padding-top: 0;
+	padding-left: 0;
+	transition: 0s;
+	opacity: 1;
+}
+.return-home:focus {
+  outline: none;
+	color: #ffffff;
+	border: 1px solid #FFB300;
+} */

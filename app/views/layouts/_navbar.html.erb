@@ -1,39 +1,36 @@
 <header>
   <div class="collapse">
 
-    <div class="center jumbotron">
-      <div class="text-center">
-        <h1>Youtube Clips</h1>
-      </div>
+    <div class="top">
+      <%= link_to root_path do %>
+        <div class="top-img">
+          <%= image_tag "/assets/Youtube Clips.png" %>
+        </div>
+      <% end %>
     </div>
 
-    <ul class="navbar">
+    <nav class="navbar">
       <% if logged_in? %>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <%= link_to 'Roomを作る', new_room_path, class:"new-room" %>
 
-            <%= link_to edit_user_path(current_user) do %>
-              <div class="circle-image-user">
-                <% if current_user.image? %>
-                  <%= image_tag current_user.image.url %>
-                <% else %>
-                  <%= image_tag "/assets/default.jpg" %>
-                <% end %>
-              </div>
-              <p><%= current_user.name %></p>
-            <% end %>
+        <div class="user-menu">
+          <div class="submenu">
+            <div class="circle-image-user">
+              <% if current_user.image? %>
+                <%= image_tag current_user.image.url %>
+              <% else %>
+                <%= image_tag "/assets/default.jpg" %>
+              <% end %>
+            </div>
+            <p><%= current_user.name %></p>
+          </div>
 
-          </a>
-          <ul class="dropdown-menu">
-            <li role="separator" class="divider"></li>
-            <li><%= link_to 'Room作成', new_room_path %></li>
-            <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-          </ul>
-        </li>
-      <% else %>
-        <li><%= link_to 'Signup', signup_path %></li>
-        <li><%= link_to 'Login', login_path %></li>
+            <ul class="hidden">
+              <li><%= link_to 'プロフィール', edit_user_path(current_user) %></li>
+              <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+            </ul>
+        </div>
       <% end %>
-    </ul>
+    </nav>
   </div>
 </header>

@@ -1,12 +1,12 @@
 <% if logged_in? %>
-  <h2>Room一覧</h2>
-  <div class='youtube_home'>
+  <h1>Room一覧</h1>
+  <div class='youtube-home'>
     <% @rooms.reverse.each do |room| %>
 
       <div class='col'>
         <%= link_to room_path(room) do %>
-          <h3><%= room.name %></h3>
           <img src="https://img.youtube.com/vi/<%= room.youtube_url.scan(/\?v=([^&]+)/).flatten[0] %>/hqdefault.jpg">
+          <p><%= room.name %></p>
         <% end %>
       </div>
 
@@ -14,5 +14,6 @@
   </div>
 
 <% else %>
-<p>ログイン前表示</p>
+  <li><%= link_to 'Signup', signup_path %></li>
+  <li><%= link_to 'Login', login_path %></li>
 <% end %>

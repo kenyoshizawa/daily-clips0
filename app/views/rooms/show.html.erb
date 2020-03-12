@@ -1,28 +1,32 @@
-<h2><%= "ルーム名：#{@room.name}" %></h2>
+<div id="room">
+  <h2><%= "#{@room.name}" %></h2>
 
-<div id="youtube">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @room.youtube_url%>"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-  </iframe>
-</div>
+  <div id="youtube">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @room.youtube_url%>"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
 
-<div id="chat">
-  <div id="messages" data-room_id="<%= @room.id %>">
-    <div id="all-messages">
-      <%= render @messages %>
+  <div id="chat">
+    <div id="messages" data-room_id="<%= @room.id %>">
+      <div id="all-messages">
+        <%= render @messages %>
+      </div>
+    </div>
+    <div id="chat-form">
+      <form>
+        <label class="ef">
+          <input type="text" placeholder="コメント" data-behavior="room_speaker">
+        </label>
+      </form>
     </div>
   </div>
 
-  <form>
-    <label>Say something:</label>
-    <div class="form-group">
-      <input type="text" data-behavior="room_speaker">
-    </div>
-  </form>
+  <!-- <div class="home-button">
+    <button class="return-home"><%= link_to '◀︎一覧に戻る', root_path %></button>
+  </div> -->
 </div>
-
-<%= link_to '一覧に戻る', root_path %>
 <!-- jquery動作確認用 -->
-<script>
+<!-- <script>
   $("#messages").css("color","red")
-</script>
+</script> -->
