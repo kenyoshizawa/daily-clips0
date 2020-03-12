@@ -4,17 +4,18 @@
   <%= form_for(@room) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
 
-  <div class="room-name">
+  <div class="room-form">
     <%= f.label :name %>
-    <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
     <%= f.text_field :name %>
   </div>
 
-  <div class="room-url">
+  <div class="room-form">
     <%= f.label :youtube_url%>
     <%= f.text_field :youtube_url %>
   </div>
 
-    <%= f.submit %>
+  <div class="create-button">
+    <button class="return-home"><%= f.submit '作成' %></button>
+  </div>
   <% end %>
 </div>

@@ -3,12 +3,12 @@
   margin: 0 auto;
 }
 
-.room-name{
+.room-form{
 	position: relative;
 	width: 27.33%;
 	margin: 40px 3%;
 }
-.room-name input[type='text'] {
+.room-form input[type='text'] {
 	font: 15px/24px sans-serif;
 	box-sizing: border-box;
 	width: 100%;
@@ -17,22 +17,15 @@
 	letter-spacing: 1px;
 	/* border: 0; */
 }
-.room-name input[type='text']:focus {
+.room-form input[type='text']:focus {
 	outline: none;
 }
-.room-name input[type='text']:focus::after {
+.room-form input[type='text']:focus::after {
 	outline: none;
 }
-.room-name i {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 9px 5px;
-	transition: 0.3s;
-	color: #aaaaaa;
-}
-/* カラー */
-.room-name::after {
+
+/* アンダーライン */
+.room-form::after {
 	display: block;
 	width: 100%;
 	height: 4px;
@@ -42,21 +35,37 @@
 	border-style: solid;
 	border-color: #da3c41;
 }
-
-
-#chat-form input[type='text'] {
- font: 15px/24px sans-serif;
- box-sizing: border-box;
- width: 100%;
- padding: 0.3em;
- transition: 0.3s;
- letter-spacing: 1px;
- border: 1px solid #1b2538;
- border-radius: 4px;
- margin-top: 10px;
+/* ボタン */
+.create-button{
+  margin: 40px 3%;
 }
-.ef input[type='text']:focus {
- border: 1px solid #da3c41;
- outline: none;
- box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+a{ color: black; }
+.return-home{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 160px;
+	padding: 1em;
+	line-height: 1.4;
+	cursor: pointer;
+	user-select: none;
+	color: #ffffff;
+	border: 1px solid #FFB300;
+	border-radius: 0.25rem;
+	background: #FFB300;
+}
+.return-home:hover{
+	color: #ffffff;
+	border-color: #FF8F00;
+	background-color: #FF8F00;
+}
+.return-home:focus {
+  outline: none;
+	color: #ffffff;
+	border: 1px solid #FFB300;
+}
+
+.return-home input[type='submit'] {
+  border-style: none;
+  background: #FFB300;
 }
