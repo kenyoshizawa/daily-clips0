@@ -14,6 +14,7 @@ if Rails.env.production?
     }
     config.fog_directory     =  ENV['S3_BUCKET']
     config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" }
+    config.asset_host = 'https://youtube-clips-image.s3.amazonaws.com'
   end
 
   # 日本語ファイル名の設定
