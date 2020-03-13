@@ -23,6 +23,10 @@
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
 
+      <button type="button" class="btn btn-outline-secondary rounded-pill">
+        <%= f.file_field :image, accept: 'image/jpg, image/jpeg, image/gif, image/png' %>
+      </button>
+
         <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>
     <% end %>
   </div>
