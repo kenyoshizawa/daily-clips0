@@ -12,10 +12,7 @@
 	font: 15px/24px sans-serif;
 	box-sizing: border-box;
 	width: 100%;
-	/* padding: 0.3em;
-	padding-left: 40px; */
 	letter-spacing: 1px;
-	/* border: 0; */
 }
 .room-form input[type='text']:focus {
 	outline: none;
