@@ -11,3 +11,30 @@
   object-fit: cover;
   display: inline-block;
 }
+
+/* user_edit */
+.user-edit{
+  width: 1300px;
+  margin: 0 auto;
+}
+.user-edit .circle-image{
+  margin: 40px 8%;
+}
+.user-image{
+  margin: 40px 3%;
+}
+.user-image input[type='file']{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  width: 200px;
+  height: 20px;
+  padding: 1em;
+  line-height: 1.4;
+	cursor: pointer;
+	user-select: none;
+	border: 2px solid #FFB300;
+  outline: none;
+  border-radius: 0.25rem;
+}
