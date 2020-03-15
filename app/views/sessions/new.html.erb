@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h1>Log in</h1>
+  <h1>ログイン</h1>
 </div>
 
 <div class="row">
@@ -7,18 +7,26 @@
     <%= form_for(:session, url: login_path) do |f| %>
 
       <div class="form-group">
-        <%= f.label :name, 'UserName' %>
+        <%= f.label :name, '名前' %>
         <%= f.text_field :name, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password, 'Password' %>
+        <%= f.label :password, 'パスワード' %>
         <%= f.password_field :password, class: 'form-control' %>
       </div>
 
       <%= f.submit 'Log in', class: 'btn btn-primary btn-block' %>
     <% end %>
 
-    <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
+    <p><%= link_to 'ユーザ新規登録', signup_path %></p>
+  </div>
+  <div>
+    <p>テストユーザ１</p>
+    <p>名前：apple、パスワード：apple</p>
+    <p>テストユーザ２</p>
+    <p>名前：seal、パスワード：seal</p>
+    <p>テストユーザ３</p>
+    <p>名前：bear、パスワード：bear</p>
   </div>
 </div>

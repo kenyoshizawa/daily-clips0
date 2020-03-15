@@ -5,6 +5,11 @@ ja:
         name: 名前
         password: パスワード
         password_confirmation: 確認用パスワード
+        image: プロフィール画像
+
+      session:
+        name: 名前
+        password: パスワード
 
       room:
         name: Room名

@@ -14,6 +14,16 @@
   </div>
 
 <% else %>
-  <li><%= link_to 'Signup', signup_path %></li>
-  <li><%= link_to 'Login', login_path %></li>
+<div class="top-img-login">
+  <%= image_tag "Youtube Clips_login2.png" %>
+</div>
+
+<div class="sign-in-top">
+  <div class="signin">
+    <%= link_to '新規登録', signup_path %>
+  </div>
+  <div class="login">
+    <%= link_to 'ログイン', login_path %>
+  </div>
+</div>
 <% end %>
