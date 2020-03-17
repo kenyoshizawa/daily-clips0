@@ -1,34 +1,35 @@
 <div class="text-center">
-  <h1>新規登録</h1>
+  <h1><span id="signin-title">ユーザー登録</span></h1>
 </div>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <%= form_for(@user) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
 
-    <%= form_for(@user) do |f| %>
-      <%= render 'layouts/error_messages', model: f.object %>
+    <div class="form-group">
+      <%= f.label :name, class: 'ef' %>
+      <%= f.text_field :name %>
+    </div>
 
-      <div class="form-group">
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
-      </div>
+    <div class="form-group">
+      <%= f.label :password, class: 'ef' %>
+      <%= f.password_field :password %>
+    </div>
 
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-      </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: 'ef' %>
+      <%= f.password_field :password_confirmation %>
+    </div>
 
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-      </div>
-      
-      <%= f.label :image %>
-      <button type="button" class="btn btn-outline-secondary rounded-pill">
+    <div class="form-group">
+      <div class="file-field">
+        <%= f.label :image, class: 'file' %>
         <%= f.file_field :image, accept: 'image/jpg, image/jpeg, image/gif, image/png' %>
-      </button>
+      </div>
+    </div>
 
-        <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>
-    <% end %>
-  </div>
+    <div class="form-group", id="signin-btn">
+      <%= f.submit '送信' %>
+    </div>
+  <% end %>
 </div>

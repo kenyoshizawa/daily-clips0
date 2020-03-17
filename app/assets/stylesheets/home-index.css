@@ -12,12 +12,12 @@
   margin: 50px auto 0;
   width: 1300px;
 }
-/* 新規登録 */
-.signin{
+/* 新規登録、ログイン */
+.signin, .login{
   width: 160px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
-.signin a{
+.signin a, .login a{
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -39,30 +39,6 @@
 .signin a:hover{
 	border-color: #40E0D0;
 	background-color: #40E0D0;
-}
-/* ログイン */
-.login{
-  width: 160px;
-  margin: 20px auto 0;
-}
-.login a{
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-
-  width: 160px;
-  height: 20px;
-  padding: 1em;
-  line-height: 1.4;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 0.25rem;
-  text-align: center;
-
-  color: black;
-  border: 1px solid #FFB300;
-  background-color: #FFB300;
-  outline: none;
 }
 .login a:hover{
 	border-color: #32CD32;
