@@ -26,10 +26,6 @@
 	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
 }
 /* 画像ファイル */
-/* .file-field input[type='file']{
-	display: none;
-} */
-
 .file{
 width: 100%;
 height: 40px;
@@ -42,6 +38,21 @@ line-height: 1.5;
 cursor: pointer;
 outline-width: 2px;
 }
+.file-field input[type='file']{
+	display: none;
+	position: relative;
+	color: red;
+}
+/* .file-field::before{
+	content: “添付ファイル：”;
+	position: absolute;
+	background: #fff;
+	width: 110px;
+	height: 26px;
+	line-height: 1.8;
+	text-align: right;
+} */
+
 /* 送信ボタン */
 .form-group input[type='submit']{
 	font: 15px/24px sans-serif;
