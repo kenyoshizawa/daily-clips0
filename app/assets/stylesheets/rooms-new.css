@@ -9,32 +9,16 @@
 	margin: 40px 3%;
 }
 .form input[type='text']{
-	font: 15px/24px sans-serif;
-	box-sizing: border-box;
-	width: 100%;
-	/* padding: 0.3em;
-	padding-left: 10px; */
-	letter-spacing: 1px;
-  /* border: 0; */
-}
-.form input[type='text']:focus{
-	outline: none;
-}
-.form input[type='text']:focus::after{
-	outline: none;
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  letter-spacing: 1px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
 }
 
-/* アンダーライン */
-.form::after{
-	display: block;
-	width: 100%;
-	height: 4px;
-	margin-top: -1px;
-	content: '';
-	border-width: 0 1px 1px 1px;
-	border-style: solid;
-	border-color: #da3c41;
-}
+
 /* ボタン */
 .create-button{
   margin: 40px 3%;

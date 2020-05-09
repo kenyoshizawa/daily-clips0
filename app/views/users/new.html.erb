@@ -17,21 +17,15 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :password_confirmation, class: 'ef' %>
+      <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
     </div>
 
     <div class="form-group">
       <div class="file-field">
-        <%= f.label :image, class: 'file' %>
         <%= f.file_field :image, accept: 'image/jpg, image/jpeg, image/gif, image/png' %>
       </div>
     </div>
-
-    <!-- <label for=”id_img” >
-      <span>ファイルを選択</span>
-      <input id=”id_img” type=”file”>
-    </label> -->
 
     <div class="form-group", id="signin-btn">
       <%= f.submit '送信' %>
