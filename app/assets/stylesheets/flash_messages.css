@@ -1,0 +1,11 @@
+.alert {
+  text-align: center;
+  color: #721c24;
+  background-color: #f8d7da;
+  /* animation: fade-in-out 2s ease 1s forwards; */
+}
+
+/* @keyframes fade-in-out {
+  50% {visibility: visible; opacity: 1;}
+  100% {visibility: hidden; opacity: 0;}
+} */
