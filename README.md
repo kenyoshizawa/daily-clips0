@@ -34,7 +34,8 @@ youtube clips（URL：https://youtube-clips.herokuapp.com ）
 * 本番環境
   * Heroku
 * 使用した主なgem
-aws-sdk-s3（S3のストレージ使用）
-
-Active Storage（画像アップロード）
-
+  * jquery-rails（リアルタイムチャット）
+  * pry-byebug（デバッグ）
+  * carrierwave（画像アップロード）
+  * rmagick（画像操作）
+  * fog-aws（S3アップロード）
