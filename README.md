@@ -7,7 +7,17 @@ youtube clips（URL：https://youtube-clips.herokuapp.com ）
 
 # 機能一覧
 
-* Ruby version
+* 新規ユーザ登録
+　
+* ログイン/ログアウト
+　
+* プロフィール編集（ユーザ名、プロフィール画像）
+　
+* Room作成（Room名、youtubeURL貼り付け）
+　
+* リアルタイムチャット（action cable)
+　
+* Room一覧表示
 
 
 # 使用技術一覧
