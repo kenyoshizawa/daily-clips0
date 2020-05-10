@@ -1,9 +1,11 @@
-# README
+# 概要
+# 機能一覧
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version
 
-Things you may want to cover:
+
+# 使用技術一覧
+
 
 * Ruby version
 
