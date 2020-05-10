@@ -17,21 +17,22 @@ youtube clips（URL：https://youtube-clips.herokuapp.com ）
 
 # 使用技術一覧
 
+* 言語
+Ruby（2.6.3）
+* フレームワーク
+Ruby on Rails（5.2.3）
+* DB
+MySQL（5.7）
+* フロントエンド
 
-* Ruby version
+jQuery
+* 開発環境
+Docker for Mac
+Atom
+* 本番環境
+heroku
+* 使用した主なgem
+aws-sdk-s3（S3のストレージ使用）
 
-* System dependencies
+Active Storage（画像アップロード）
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
