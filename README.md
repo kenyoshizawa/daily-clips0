@@ -24,15 +24,15 @@ youtube clips（URL：https://youtube-clips.herokuapp.com ）
 * DB
   * MySQL（8.0.19）
 * フロントエンド
-　* HTML
-　* CSS
-　* JavaScript
-　* jQuery
+  * HTML
+  * CSS
+  * JavaScript
+  * jQuery
 * 開発環境
-　* Mac
-　* Atom
+  * Mac
+  * Atom
 * 本番環境
-　* Heroku
+  * Heroku
 * 使用した主なgem
 aws-sdk-s3（S3のストレージ使用）
 
