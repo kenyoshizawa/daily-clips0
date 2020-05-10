@@ -18,7 +18,7 @@ youtube clips（URL：https://youtube-clips.herokuapp.com ）
 # 使用技術一覧
 
 * 言語
-Ruby（2.6.3）
+  * Ruby（2.6.3） 
 * フレームワーク
 Ruby on Rails（5.2.3）
 * DB
