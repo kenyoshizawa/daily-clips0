@@ -20,17 +20,19 @@ youtube clips（URL：https://youtube-clips.herokuapp.com ）
 * 言語
   * Ruby（2.6.3） 
 * フレームワーク
-Ruby on Rails（5.2.3）
+  * Ruby on Rails（5.2.4.1）
 * DB
-MySQL（5.7）
+  * MySQL（8.0.19）
 * フロントエンド
-
-jQuery
+　* HTML
+　* CSS
+　* JavaScript
+　* jQuery
 * 開発環境
-Docker for Mac
-Atom
+　* Mac
+　* Atom
 * 本番環境
-heroku
+　* Heroku
 * 使用した主なgem
 aws-sdk-s3（S3のストレージ使用）
 
