@@ -1,5 +1,6 @@
 # 概要
-youtube clips（URL：https://youtube-clips.herokuapp.com　）はyoutube動画を共有し、コメントしあえるアプリです。
+youtube clips（URL：https://youtube-clips.herokuapp.com ）
+はyoutube動画を共有し、コメントしあえるアプリです。
 # 機能一覧
 
 * Ruby version
